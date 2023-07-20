@@ -9,13 +9,13 @@ sudo docker-compose build
 #### Start docker
 
 ```
-sudo docker-compose up
+docker-compose up
 ```
 
 ### Stop docker-compose
 
 ```
-sudo docker-compose down
+ docker-compose down
 ```
 
 #### Task CRUD API on 
