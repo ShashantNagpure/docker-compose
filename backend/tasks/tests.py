@@ -13,11 +13,13 @@ class AddTestCase(TestCase):
                                 priority = 0,)
     
 
-    def testNoError(self):
-        """Test that the ``add`` task runs with no errors,
-        and returns the correct result."""
-        # result = add.delay(8, 8)
-        # update_task_status.delay(1,2)
-
-        self.assertEquals(16, 16)
-        # self.assertTrue(result.successful())
+    def testUpdateTaskStatus(self):
+        
+        task_id = 1
+        status_id = 2
+        
+        update_task_status.delay(task_id,status_id).get()
+        
+        task = Task.objects.get(pk=task_id)
+        
+        self.assertEquals(task.status, status_id)
