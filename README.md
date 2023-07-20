@@ -3,7 +3,7 @@
 #### Build docker
 
 ```
-sudo docker-compose build
+docker-compose build
 ```
 
 #### Start docker
