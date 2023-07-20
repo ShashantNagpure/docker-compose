@@ -1,8 +1,4 @@
-![](https://raw.githubusercontent.com/saasitive/docker-compose-django-celery-redis-postgres/main/media/banner.jpg)
-
 # Docker Compose for Django, Celery, Redis, and Postgres
-
-Article with implemenation details: [Docker compose with Django 4, Celery, Redis and Postgres](https://saasitive.com/tutorial/django-celery-redis-postgres-docker-compose/)
 
 #### Build docker
 
@@ -16,14 +12,28 @@ sudo docker-compose build
 sudo docker-compose up
 ```
 
-#### Build and run in detached mode
-
-```
-sudo docker-compose up --build -d
-```
-
 ### Stop docker-compose
 
 ```
 sudo docker-compose down
 ```
+
+#### Task CRUD API on 
+
+```
+http://0.0.0.0:80/tasks/
+```
+
+#### Sample Request 
+
+```
+{
+    "title": "test task",
+    "description": "Testing",
+    "owner_email": "h1@a1.com",
+    "creator_email": "h2@w2.com",
+    "priority": 1
+
+}
+```
+
