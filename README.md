@@ -1,5 +1,8 @@
 # Docker Compose for Django, Celery, Redis, and Postgres
+* CRUD operations on a Task with Postgres as Db
+* Using Celery-tasks to update task priority asynchronously with different delays
 
+  eg: Task with priority High, its status will move from 0-1 in x seconds, then 1-2 in y seconds 
 #### Build docker
 
 ```
